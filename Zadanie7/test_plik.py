@@ -3,11 +3,11 @@ from plik import Plik
 
 class TestPlik(unittest.TestCase):
     def setUp(self):
-        self.kluby = Plik("Bayern","Manchester City")
+        self.kluby = Plik("Bayern","Manchester City","Kluby")
     def test_stworzPlik(self):
 
-        plik = self.kluby.stworzPlik("Kluby")
-        otwartyPlik = open("Kluby.txt")
+        plik = self.kluby.stworzPlik()
+        otwartyPlik = open(f"{self.kluby.fileName}" + ".txt")
         temp = otwartyPlik.readlines()
         print(temp)
         tablica = []
